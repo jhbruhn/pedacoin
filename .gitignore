@@ -14,8 +14,8 @@ src/test_pedacoin
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-fuhcoin-qt
-fuhcoin-Qt.app
+pedacoin-qt
+pedacoin-Qt.app
 
 # Unit-tests
 Makefile.test

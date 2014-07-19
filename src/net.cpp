@@ -1703,7 +1703,7 @@ void StartNode(void* parg)
         printf("Error; CreateThread(ThreadDumpAddress) failed\n");
 
     // Generate coins in the background
-    GenerateBitcoins(GetBoolArg("-gen", false), pwalletMain);
+    GeneratePedacoins(GetBoolArg("-gen", false), pwalletMain);
 }
 
 bool StopNode()

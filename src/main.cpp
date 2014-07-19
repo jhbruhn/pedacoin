@@ -3630,7 +3630,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
 
 void static ThreadBitcoinMiner(void* parg);
 
-static bool fGenerateBitcoins = false;
+static bool fGeneratePedacoins = false;
 static bool fLimitProcessors = false;
 static int nLimitProcessors = -1;
 
@@ -3646,7 +3646,7 @@ void static BitcoinMiner(CWallet *pwallet)
     CReserveKey reservekey(pwallet);
     unsigned int nExtraNonce = 0;
 
-    while (fGenerateBitcoins)
+    while (fGeneratePedacoins)
     {
         if (fShutdown)
             return;
@@ -3655,7 +3655,7 @@ void static BitcoinMiner(CWallet *pwallet)
             Sleep(1000);
             if (fShutdown)
                 return;
-            if (!fGenerateBitcoins)
+            if (!fGeneratePedacoins)
                 return;
         }
 
@@ -3752,7 +3752,7 @@ void static BitcoinMiner(CWallet *pwallet)
             // Check for stop or if block needs to be rebuilt
             if (fShutdown)
                 return;
-            if (!fGenerateBitcoins)
+            if (!fGeneratePedacoins)
                 return;
             if (fLimitProcessors && vnThreadsRunning[THREAD_MINER] > nLimitProcessors)
                 return;
@@ -3801,12 +3801,12 @@ void static ThreadBitcoinMiner(void* parg)
 }
 
 
-void GenerateBitcoins(bool fGenerate, CWallet* pwallet)
+void GeneratePedacoins(bool fGenerate, CWallet* pwallet)
 {
-    fGenerateBitcoins = fGenerate;
+    fGeneratePedacoins = fGenerate;
     nLimitProcessors = GetArg("-genproclimit", -1);
     if (nLimitProcessors == 0)
-        fGenerateBitcoins = false;
+        fGeneratePedacoins = false;
     fLimitProcessors = (nLimitProcessors != -1);
 
     if (fGenerate)

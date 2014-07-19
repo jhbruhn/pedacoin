@@ -1,4 +1,7 @@
 language: cpp
+cache: apt
+compiler:
+  - gcc
 before_install: sudo apt-get update
-install: sudo apt-get install git build-essential libssl-dev libboost-all-dev libdb++-dev libminiupnpc-dev qt-sdk -y
-script: cd src && make -f makefile.unix && cd .. && qmake && make
+install: sudo apt-get install ccache git build-essential libssl-dev libboost-all-dev libdb++-dev libminiupnpc-dev qt-sdk -y
+script: ccache -M 1G && cd src && make -f makefile.unix && cd .. && qmake && make

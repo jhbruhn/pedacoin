@@ -5,17 +5,5 @@ compiler:
 before_install: sudo apt-get update
 install: 
   - sudo apt-get install git build-essential libssl-dev libboost-all-dev libdb++-dev libminiupnpc-dev qt-sdk -y
-  - git clone -b stable https://github.com/mxe/mxe.git mxe
 script:
   - cd src && make -f makefile.unix && cd .. && qmake && make
-  - cd mxe
-  - make
-  - export PATH=./mxe/usr/bin:$PATH
-  - cd ../
-  - wget https://www.google.com/url?q=http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz
-  - tar xvfz db-4.8.30.NC.tar.gz
-  - cd db-4.8.30.NC/build_unix
-  - ../dist/configure --host=i686-pc-mingw32 --disable-replication --enable-mingw --enable-cxx
-  - cd ../..
-  - ./mxe/usr/i686-pc-mingw32/qt/bin/qmake "USE_UPNP=-"
-  - make

@@ -1,7 +1,7 @@
-FooCoin (FOO)
+PedaCoin (PDA)
 ===========
 
-[![Build Status](https://travis-ci.org/RazorLove/foocoin.png?branch=master)](https://travis-ci.org/RazorLove/foocoin)
+[![Build Status](https://travis-ci.org/RazorLove/pedacoin.png?branch=master)](https://travis-ci.org/RazorLove/pedacoin)
 
 
 Scrypt Hashcash PoW Template

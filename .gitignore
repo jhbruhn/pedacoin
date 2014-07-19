@@ -1,7 +1,7 @@
 src/*.exe
-src/fuhcoin
-src/fuhcoind
-src/test_fuhcoin
+src/pedacoin
+src/pedacoin
+src/test_pedacoin
 .*.swp
 *.*~*
 *.bak

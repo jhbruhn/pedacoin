@@ -8,7 +8,6 @@ install:
   - git clone -b stable https://github.com/mxe/mxe.git mxe
 script:
   - cd src && make -f makefile.unix && cd .. && qmake && make
-  - cd ../
   - cd mxe
   - make
   - export PATH=./mxe/usr/bin:$PATH

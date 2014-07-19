@@ -3,5 +3,14 @@ cache: apt
 compiler:
   - gcc
 before_install: sudo apt-get update
-install: sudo apt-get install ccache git build-essential libssl-dev libboost-all-dev libdb++-dev libminiupnpc-dev qt-sdk -y
-script: ccache -M 1G && cd src && make -f makefile.unix && cd .. && qmake && make
+install: 
+  - sudo apt-get install git build-essential libssl-dev libboost-all-dev libdb++-dev libminiupnpc-dev qt-sdk -y
+  - git clone -b stable https://github.com/mxe/mxe.git mxe
+script:
+  - cd src && make -f makefile.unix && cd .. && qmake && make
+  - cd ../
+  - cd mxe
+  - make
+  - export PATH=./mxe/usr/bin:$PATH
+  - ./mxe/usr/i686-pc-mingw32/qt/bin/qmake
+  - make

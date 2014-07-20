@@ -38,7 +38,7 @@ ClientModel::ClientModel(OptionsModel *optionsModel, QObject *parent) :
 //    if (fGeneratePedacoins)
 //    {
         miningType = SoloMining;
-        miningStarted = true;
+        miningStarted = false;
 //    }
 //    else
 //    {

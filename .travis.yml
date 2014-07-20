@@ -6,6 +6,8 @@ before_install: sudo apt-get update
 install: 
   - sudo apt-get install git build-essential libssl-dev libboost-all-dev libdb++-dev libminiupnpc-dev qt-sdk -y
   - git clone https://github.com/devrandom/gitian-builder.git
+  -sudo apt-get install git apache2 apt-cacher-ng python-vm-builder ruby qemu-utils
+  - sudo apt-get install qemu-kvm         # for KVM mode
 script:
   - # cd src && make -f makefile.unix && cd .. && qmake && make
   - cd gitian-builder/

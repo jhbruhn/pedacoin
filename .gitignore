@@ -1,4 +1,5 @@
 src/*.exe
+src/*.dll
 src/pedacoin
 src/pedacoin
 src/test_pedacoin
@@ -11,9 +12,10 @@ src/test_pedacoin
 *.patch
 .fuhcoin
 
+
 # Compilation and Qt preprocessor part
 *.qm
-Makefile
+Makefile*
 pedacoin-qt.exe
 pedacoin.app
 
@@ -32,3 +34,6 @@ qrc_*.cpp
 build
 
 !src/leveldb-*/Makefile
+
+release/
+object_script*

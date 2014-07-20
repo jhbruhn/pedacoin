@@ -820,7 +820,7 @@ public:
         else
             vch.insert(it, first, last);
     }
-#ifdef __linux__
+#if defined(__linux__) || defined(__WIN32) || defined(__WIN64)
     void insert(iterator it, std::vector<char>::const_iterator first, std::vector<char>::const_iterator last)
     {
         assert(last - first >= 0);

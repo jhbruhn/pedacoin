@@ -14,10 +14,10 @@
 #undef _WIN32_WINNT
 #endif
 #define _WIN32_WINNT 0x0501
-#define WIN32_LEAN_AND_MEAN 1
 #ifndef NOMINMAX
 #define NOMINMAX
 #endif
+#include <winsock2.h>
 #include <windows.h>
 // This is used to attempt to keep keying material out of swap
 // Note that VirtualLock does not provide this as a guarantee on Windows,

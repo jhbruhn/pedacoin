@@ -11,6 +11,8 @@ install:
 script:
   - # cd src && make -f makefile.unix && cd .. && qmake && make
   - cd gitian-builder/
+  - bin/make-base-vm
+  - bin/make-base-vm --arch i386
   - mkdir -p inputs; cd inputs/
   - wget 'http://miniupnp.free.fr/files/download.php?file=miniupnpc-1.6.tar.gz' -O miniupnpc-1.6.tar.gz
   - wget 'http://www.openssl.org/source/openssl-1.0.1c.tar.gz'

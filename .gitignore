@@ -18,7 +18,7 @@ src/test_pedacoin
 Makefile*
 pedacoin-qt.exe
 pedacoin.app
-
+pedacoin-qt.app
 # Unit-tests
 Makefile.test
 fuhcoin-qt_test

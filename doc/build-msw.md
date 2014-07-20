@@ -1,7 +1,7 @@
 # Compiling on Windows:
 You will need:
 * The deps (`doc/deps.zip`) extracted at `C:/deps` (so we'll have `C:/deps/boost`, `C:/deps/ssl` etc.)
-* MingW 20120426 (get it from [here](https://diyps3controller.googlecode.com/files/mingw-get-inst-20120426.exe), install using the files coming with it)
+* MingW 20120426 (get it from [here](https://diyps3controller.googlecode.com/files/mingw-get-inst-20120426.exe), install using the files coming with it, and select all the components)
 * QT (get it from [here](http://qt-mirror.dannhauer.de/official_releases/qt/4.8/4.8.6/qt-opensource-windows-x86-mingw482-4.8.6-1.exe))
 
 ## Compiling:

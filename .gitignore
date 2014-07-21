@@ -11,7 +11,7 @@ src/test_pedacoin
 *.o
 *.patch
 .fuhcoin
-
+.vagrant/
 
 # Compilation and Qt preprocessor part
 *.qm
